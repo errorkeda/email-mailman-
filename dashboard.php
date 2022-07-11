@@ -590,11 +590,7 @@ include 'header.php';
 
     //demo click on checkbox of lable
 
-    $(document).on("click", ".table-check", function() {
-      var check = $(this).val();
-      alert(check);
-
-    });
+   
 
     //Trash Email coding.........................................End
 
