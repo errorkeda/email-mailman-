@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['email'])) {
-  header("Location:http://localhost/mailman/index.php");
+  header("Location:http://hestalabs.com/tse/email-mailman-/");
 }
 include "autoload.php";
 $gobj = new Database();
