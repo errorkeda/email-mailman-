@@ -7,7 +7,11 @@ class Database{
     private $db_host = "localhost";
     private $db_user = "tse";
     private $db_pass= "bPmtHasjyTJ2SgZJ";
+<<<<<<< HEAD
     private $db_name ="abhishek";
+=======
+    private $db_name ="Abhishek";
+>>>>>>> ef1d4da039eef0f9ccc269f820325c9c3ce809ef
 
     private $conn = false;
     public $mysqli = "";
@@ -15,6 +19,8 @@ class Database{
 
     public function __construct(){
             if(!$this->conn){
+               echo $this->db_host;
+             
                 $this->mysqli = new mysqli($this->db_host,$this->db_user,$this->db_pass,$this->db_name);
                 $this->conn = true;
                     if($this->mysqli->connect_error){

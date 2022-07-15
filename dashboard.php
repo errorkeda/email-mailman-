@@ -1,7 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION['email'])) {
+<<<<<<< HEAD
   header("Location:http://hestalabs.com/tse/email-mailman-/index.php");
+=======
+  header("Location:http://hestalabs.com/tse/email-mailman-/");
+>>>>>>> ef1d4da039eef0f9ccc269f820325c9c3ce809ef
 }
 include "autoload.php";
 $gobj = new Database();
