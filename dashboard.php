@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['email'])) {
-  header("Location:http://localhost/mailman/index.php");
+  header("Location:http://hestalabs.com/tse/email-mailman-/index.php");
 }
 include "autoload.php";
 $gobj = new Database();
@@ -100,7 +100,7 @@ include 'header.php';
                       <button type="button" style="display:none" class="btn btn-outline-success btn-sm del ml-2">Delete</button>
                     </div>
                     <th id="head" scope="col"></th>
-                    <th id="head" scope="col">xyz@gmail.mailer.com</th>
+                    <th id="head" scope="col">Email</th>
                     <th id="head" scope="col">Email Subject</th>
                     <th id="head" scope="col">YY/MM/DD</th>
                     <th id="head" scope="col"></th>
@@ -216,7 +216,7 @@ include 'header.php';
 <script>
   $(document).ready(function() {
     
-
+Inboxemail();
       $(document).on("click", ".rowclick", function() {
         $("#checkall").hide();
         
@@ -248,6 +248,7 @@ include 'header.php';
                 table += '<div class="col-sm-4">';
                 table += '<p>from:-' + value.sender_email + '</p>';
                 table += '<p>To:-' + value.reciver_email + '</p>';
+		table += '<p>Message:-' + value.msg + '</p>';
                 table += '</div>';
                 table += '<div class="col-sm-4"></div>';
                 table += '<div class="col-sm-4">' + value.datetime + '</div>';

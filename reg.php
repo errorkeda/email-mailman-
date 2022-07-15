@@ -75,7 +75,7 @@ if(isset($_POST['submit'])){
                 $result = $gobj->getResult(); 
                 echo "<script>
                 alert('Your are Ragisterd Successfully');
-                window.location.href='http://localhost/mailman/index.php';
+                window.location.href='http://hestalabs.com/tse/email-mailman-/index.php';
                 </script>";           
             }
 
@@ -99,7 +99,7 @@ if(isset($_POST['submit'])){
         <div class="modelf">
             <h4>MailMan</h4>
             <?php foreach($result as $item){
-                echo $item."<br>";
+                echo "<p class='text-danger'>$item</p>"."<br>";
                 }?>
             <hr>
             <form action="#" method="post" enctype="multipart/form-data">
@@ -110,8 +110,8 @@ if(isset($_POST['submit'])){
                     <input type="text" name="username" id="username" class="form-control mt-2"  placeholder="Enter username" >
                     <input type="email" name="email" id="email" class="form-control mt-2" placeholder="Enter your Email" >
                     <input type="email" name="remail" id="remail" class="form-control mt-2" placeholder="Enter your Recovery Email" > 
-                    <input type="text" name="pass" id="pass" class="form-control mt-2" placeholder="Enter your password" >
-                    <input type="text" name="cpass" id="cpass" class="form-control mt-2" placeholder="Confirm password" >
+                    <input type="password" name="pass" id="pass" class="form-control mt-2" placeholder="Enter your password" >
+                    <input type="password" name="cpass" id="cpass" class="form-control mt-2" placeholder="Confirm password" >
                     <div class="box">
                     <input name="checkbox" id="checkbox" type="checkbox" class="mt-2">
                     <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>

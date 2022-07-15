@@ -28,7 +28,8 @@ if (isset($_POST['submit'])) {
         if ($gobj->reset_password('Reg_userid', $data)) {
             echo "<script>
             alert('Your Password successfully Update');
-            window.location.href='http://localhost/mailman/index.php';
+             window.location.href='http://hestalabs.com/tse/email-mailman-/index.php';
+
             </script>";
         }
     }

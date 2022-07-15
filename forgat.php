@@ -15,7 +15,7 @@ include "autoload.php";
     <div class="modelf">
         <h4>MailMan</h4>
         <hr>
-        <form action="mail.php" method="post">
+        <form action="http://hestalabs.com/tse/email-mailman-/mail.php" method="post">
         <div class="row">
             <div class="col-sm-8">
                 <p>Enter your Registerd Email-id</p>

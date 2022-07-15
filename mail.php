@@ -18,12 +18,12 @@ require 'PHPMailer/src/SMTP.php';
       if(Validate::required($email)){
          echo "<script>
                  alert('Email is required');
-                 window.location.href='http://localhost/mailman/forgat.php';
+                 window.location.href='http://hestalabs.com/tse/email-mailman-/forgat.php';
                  </script>";  
       }elseif(Validate::is_email($email)){
          echo "<script>
          alert('Invalid Email');
-         window.location.href='http://localhost/mailman/forgat.php';
+         window.location.href='http://hestalabs.com/tse/email-mailman-/forgat.php';
          </script>";  
       }else{
 
@@ -51,13 +51,14 @@ require 'PHPMailer/src/SMTP.php';
 
             $mail->isHTML(true);                                 
             $mail->Subject = 'Forgat password Link';
-            $mail->Body    = 'Click on This URL:-http://localhost/mailman/new_password.php';
+            $mail->Body    = 'Click on This URL:-http://hestalabs.com/tse/email-mailman-/new_password.php';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
             echo "<script>
             alert('Email has been sent Your Registerd Email id');
             </script>"; 
+	
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
